@@ -18,11 +18,16 @@ class FormController {
     for (dynamic data in jsonAppData) {
       Meeting meetingData = Meeting(
         eventName: data['Subject'],
-        from: data['startTime'],
-        to: data['endTime'],
+        //from: _convertDateFromString(data['startTime']),
+        //to: _convertDateFromString(data['endTime']),
       );
       appointmentData.add(meetingData);
+      print('//////////////////////');
     }
     return appointmentData;
   }
+  DateTime _convertDateFromString(String date){
+    return DateTime.parse(date);
+  }
+
 }

@@ -8,10 +8,10 @@ class Meeting {
   bool? isAllDay;
 
   Meeting({
-    this.eventName = '',
-    required this.from,
-    required this.to,
-    this.background,
+    this.eventName,
+    this.from,
+    this.to,
+    this.background = Colors.blue,
     this.isAllDay = false,
   });
 }
